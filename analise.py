@@ -42,7 +42,7 @@ class Analisar(Frame):
         soma = min_dist_setosa + min_dist_versicolor + min_dist_virginica
         result = "Setosa : {}%\nVersicolor : {}%\nVirginica :{}%".format(round(((1-(min_dist_setosa/soma) )*100), 2),round(((1-(min_dist_versicolor/soma) )*100), 2),round(((1-(min_dist_virginica/soma) )*100), 2))
         messagebox.showinfo("Resultado",result)
-        print(result)
+        
         
 
     def distancia_euclidiana_4D(self,x,y,z,w):
