@@ -1,6 +1,8 @@
 from controller import Controller
 from tkinter import *
-root = Tk()
-Controller(root)
-root.title("")
-root.mainloop()
+
+if __name__ == "__main__":
+    root = Tk()
+    Controller(root)
+    root.title("")
+    root.mainloop()

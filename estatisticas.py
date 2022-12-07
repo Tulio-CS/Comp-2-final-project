@@ -1,6 +1,7 @@
 
 from tkinter import *
 import numpy as np
+
 class Estatisticas(Frame):
     def __init__(self,master,controller):
         super().__init__(master,bg="#292929")
