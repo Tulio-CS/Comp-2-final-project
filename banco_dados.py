@@ -5,13 +5,19 @@ from tkinter import messagebox
 
 
 class banco_de_dados:
-    def __init__(self,path):
+    def __init__(self,path:str) -> None:
+        """Objeto que guarda os valores referentes ao 
+        comprimento da selapa , largura da sepala
+        comprimento da petala, largura da petala
+        de cada tipo de flor"""
         self.path = path
         self.setosa = np.array([[],[],[],[]])
         self.versicolor = np.array([[],[],[],[]])
         self.virginica = np.array([[],[],[],[]])
             
-    def rotina_csv(self):
+    def rotina_csv(self) -> None:
+        """Rotina que atualiza o banco de dados com os valores
+        do arquivo .csv inserido no caminho(path)"""
         try:
             setosa = [[],[],[],[]]
             versicolor = [[],[],[],[]]
@@ -35,4 +41,5 @@ class banco_de_dados:
         except FileNotFoundError:
             if len(self.path) != 0:
                 messagebox.showerror('Python Error', 'Error: Caminho invalido')
-        return 0
+
+
