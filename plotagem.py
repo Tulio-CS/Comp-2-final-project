@@ -25,10 +25,10 @@ class graph(Frame):
         self.y_axis.grid(row=2,column=1)
 
         # ---Botao para plotar o grafico---
-        Button(self,text="Plotar",width=17,bg="black",fg="white",command=lambda : self.plotar(controller)).grid(row=4,column=0,columnspan=2)
+        Button(self,text="Plotar",width=17,bg="#4CAF50",fg="white",command=lambda : self.plotar(controller)).grid(row=4,column=1)
 
         # ---Botao para voltar ao menu---
-        Button(self,text="Voltar",width=17,bg="black",fg="white",command= lambda: controller.switchWindows(1,0)).grid(row=5,column=0,columnspan=2)
+        Button(self,text="Voltar",width=17,bg="#f44336",fg="white",command= lambda: controller.switchWindows(1,0)).grid(row=4,column=0)
 
         self.pack(padx = 0, pady = 0,fill="both",expand=True)
     

@@ -11,7 +11,7 @@ class Estatisticas(Frame):
         quantidade_de_dados = len(controller.banco_dados.virginica[0]) + len(controller.banco_dados.versicolor[0]) + len(controller.banco_dados.setosa[0])
 
         # ---Botao para voltar ao menu---
-        Button(self,text="Voltar",bg=a ,fg=o,width=15,command= lambda: controller.switchWindows(3,0)).grid(row=25)
+        Button(self,text="Voltar",bg="#f44336" ,fg=o,width=15,command= lambda: controller.switchWindows(3,0)).grid(row=25)
 
         #Tratando excecoes
         if controller.path == "":
