@@ -25,7 +25,8 @@ class Controller:
 
         except FileNotFoundError:
             self.path = ""
-
+        
+        
         #Criando e atualiazndo o banco de dados
         self.banco_dados = banco_de_dados(self.path)
         self.banco_dados.rotina_csv()
@@ -46,6 +47,11 @@ class Controller:
         self.framelist[1].forget()
         self.framelist[2].forget()
         self.framelist[3].forget()
+        if self.path == "":
+            self.path_label = Label(master,text="Caminho Invalido",bg="#292929",fg="white")
+        else:
+            self.path_label = Label(master,text=self.path,bg="#292929",fg="white")
+        self.path_label.pack()
 
     def switchWindows(self,atual:int,proxima:int)  -> None:
         """Função que troca a pagina que e mostrada ao usuario"""

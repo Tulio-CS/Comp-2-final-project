@@ -8,27 +8,27 @@ class graph(Frame):
         super().__init__(master,bg="#292929")
 
         # ---Titulo do frame---
-        Label(self,text="Escolha os eixos:",bg="#292929",fg="white", font='Ivi 13 bold').grid(row=0,column=0,columnspan=2)
-
+        Label(self,text="Escolha os eixos:",bg="#292929",fg="white", font='Algerian 15 bold').grid(row=0,column=0,columnspan=2,pady=5)
+        
         # ---Label para o eixo X---
-        Label(self,text="Eixo X",bg="#292929",fg="white", font='Ivi 10 bold').grid(row=1,column=0)
+        Label(self,text="Eixo X:     ",bg="#292929",fg="white", font='Ivi 12 bold').grid(row=2,column=0,pady=5)
 
         # ---Label para o eixo Y---
-        Label(self,text="Eixo Y",bg="#292929",fg="white", font='Ivi 10 bold').grid(row=2,column=0)
+        Label(self,text="Eixo Y:     ",bg="#292929",fg="white", font='Ivi 12 bold').grid(row=3,column=0,pady=5)
 
         # ---Entry para o eixo x---
         self.x_axis = ttk.Combobox(self,width=17,state="readonly",values=["comprimento sepala","largura sepala","comprimento petala","largura petala"])
-        self.x_axis.grid(row=1,column=1)
+        self.x_axis.grid(row=2,column=1,pady=5)
 
         # ---Entry para o eixo y---
         self.y_axis = ttk.Combobox(self,width=17,state="readonly",values=["comprimento sepala","largura sepala","comprimento petala","largura petala"])
-        self.y_axis.grid(row=2,column=1)
+        self.y_axis.grid(row=3,column=1,pady=5)
 
         # ---Botao para plotar o grafico---
-        Button(self,text="Plotar",width=17,bg="#4CAF50",fg="white",command=lambda : self.plotar(controller)).grid(row=4,column=1)
+        Button(self,text="Plotar",width=15,bg="#4CAF50",fg="white", font='Ivi 10 bold', command=lambda : self.plotar(controller)).grid(row=5,column=1,pady=5)
 
         # ---Botao para voltar ao menu---
-        Button(self,text="Voltar",width=17,bg="#f44336",fg="white",command= lambda: controller.switchWindows(1,0)).grid(row=4,column=0)
+        Button(self,text="Voltar",width=15,bg="#f44336",fg="white", font='Ivi 10 bold', command= lambda: controller.switchWindows(1,0)).grid(row=5,column=0,pady=5,padx=5)
 
         self.pack(padx = 0, pady = 0,fill="both",expand=True)
     

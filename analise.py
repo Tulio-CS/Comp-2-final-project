@@ -9,34 +9,33 @@ class Analisar(Frame):
 
         # ---Titulo---
         super().__init__(master,bg="#292929")
-        Label(self,text="Insira os dados",bg="#292929",fg="white", font='Ivi 15 bold').grid(row=0,column=0,columnspan=2)
-        Label(self,text="",bg="#292929").grid(row=1,column=0,columnspan=2)
+        Label(self,text="Insira os dados",bg="#292929",fg="white",font='Algerian 15 bold').grid(row=0,column=0,columnspan=2,pady=5)
+        
 
         # ---Comprimento da sepala---
-        Label(self,text="Comprimento da sepala:",width=20,bg="#292929",fg="white", font='Ivi 10 bold', anchor='sw').grid(row=2,column=0)
+        Label(self,text="Comprimento da sepala:",width=20,bg="#292929",fg="white", font='Ivi 10 bold', anchor='sw').grid(row=2,column=0,pady=5)
         self.com_sep = Entry(self,width=24,bg="#3F3F3F",fg="white")
-        self.com_sep.grid(row=2,column=1)
+        self.com_sep.grid(row=2,column=1,pady=5)
 
         # ---Largura da sepala---
-        Label(self,text="Largura da sepala:",width=20,bg="#292929",fg="white", font='Ivi 10 bold', anchor='sw').grid(row=3,column=0)
+        Label(self,text="Largura da sepala:",width=20,bg="#292929",fg="white", font='Ivi 10 bold', anchor='sw').grid(row=3,column=0,pady=5)
         self.lar_sep = Entry(self,width=24,bg="#3F3F3F",fg="white")
-        self.lar_sep.grid(row=3,column=1)
+        self.lar_sep.grid(row=3,column=1,pady=5)
 
         # ---Comprimento da petala---
-        Label(self,text="Comprimento da petala:",width=20,bg="#292929",fg="white", font='Ivi 10 bold', anchor='sw').grid(row=4,column=0)
+        Label(self,text="Comprimento da petala:",width=20,bg="#292929",fg="white", font='Ivi 10 bold', anchor='sw').grid(row=4,column=0,pady=5)
         self.com_pet = Entry(self,width=24,bg="#3F3F3F",fg="white")
-        self.com_pet.grid(row=4,column=1)
+        self.com_pet.grid(row=4,column=1,pady=5)
 
         # ---Largura da petala---
-        Label(self,text="Comprimento da petala:",width=20,bg="#292929",fg="white", font='Ivi 10 bold', anchor='sw').grid(row=5,column=0)
+        Label(self,text="Comprimento da petala:",width=20,bg="#292929",fg="white", font='Ivi 10 bold', anchor='sw').grid(row=5,column=0,pady=5)
         self.lar_pet = Entry(self,width=24,bg="#3F3F3F",fg="white")
-        self.lar_pet.grid(row=5,column=1)
+        self.lar_pet.grid(row=5,column=1,pady=5)
 
         # ---Botoes---
-        Label(self,text="",bg="#292929").grid(row=6,column=0,columnspan=2)
-        Button(self,text="Voltar",width=22,bg="#f44336",fg="white",command= lambda: controller.switchWindows(2,0)).grid(row=7,column=0)
+        Button(self,text="Voltar",width=16,bg="#f44336",fg="white", font='Ivi 12 bold', command= lambda: controller.switchWindows(2,0)).grid(row=7,column=0,pady=5,padx=5)
     
-        Button(self,text="Analisar",width=22,bg="#4CAF50",fg="white",command= lambda: self.analisar(controller)).grid(row=7,column=1)
+        Button(self,text="Analisar",width=15,bg="#4CAF50",fg="white", font='Ivi 12 bold', command= lambda: self.analisar(controller)).grid(row=7,column=1,pady=5,padx=5)
         self.pack(padx = 0, pady = 0,fill="both",expand=True)
     
     def analisar(self,controller:object) -> object:
