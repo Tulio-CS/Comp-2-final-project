@@ -1,4 +1,7 @@
-path = "C:/Users/tulio/OneDrive/Documentos/GitHub/Comp-2-final-project/iris.csv"
+#Trabalho Final de Computação
+#Alunos: Jhulia Schmidt Ceccon, Pedro Henrique Chicarino, Túlio Castro Silva
+#Professor : Giomar
+
 import numpy as np
 import csv
 from tkinter import messagebox

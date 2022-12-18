@@ -1,6 +1,9 @@
-from tkinter import *
-from tkinter import filedialog
-from tkinter.filedialog import askopenfile
+#Trabalho Final de Computação
+#Alunos: Jhulia Schmidt Ceccon, Pedro Henrique Chicarino, Túlio Castro Silva
+#Professor : Giomar
+
+from tkinter import Button,Frame,Tk
+from tkinter.filedialog import askopenfilename
 from estatisticas import Estatisticas
 import pickle
 
@@ -9,9 +12,7 @@ import pickle
 class menu(Frame):
     def __init__(self, master:Tk,controller:object) -> None:
         super().__init__(master,bg="#292929")
-        # ---Label indicando o caminho---
-
-        
+     
         # ---Botao para mostrar as estatisticas---
         Button(self,text="Mostrar estatisticas",bg="#025773",fg="white", height=8,width=16 ,font='Ivi 10 bold',command=lambda: controller.switchWindows(0,3)).grid(row=1,column=0)
 
@@ -19,7 +20,7 @@ class menu(Frame):
         Button(self,text="Mostrar graficos",bg="#006666",fg="white", height=8,width=16 , font='Ivi 10 bold',command= lambda: controller.switchWindows(0,1)).grid(row=1,column=1)
 
         # ---Botao para classificar uma amostra---
-        Button(self,text="Classificar amostra",bg="#c1b681",fg="white",height=8,width=16, font='Ivi 10 bold',command= lambda: controller.switchWindows(0,2)).grid(row=1,column=2)
+        Button(self,text="Classificar amostra",bg="#C6093B",fg="white",height=8,width=16, font='Ivi 10 bold',command= lambda: controller.switchWindows(0,2)).grid(row=1,column=2)
 
         # ---Botao para selecionar o caminho---
         Button(self,text="Alterar o caminho",bg="#292929",fg="white",border = 0, font='Ivi 10 bold', command=lambda: self.choose_path(master,controller)).grid(row=2,column=0,pady=10)
@@ -33,7 +34,7 @@ class menu(Frame):
     def choose_path(self,master:Tk,controller:object) -> None:
         """Funcao que escolhe o caminho para o arquivo .csv contendo os dados"""
 
-        file = filedialog.askopenfilename(filetypes = (("CSV Files","*.csv"),))
+        file = askopenfilename(filetypes = (("CSV Files","*.csv"),))
 
         if len(file) != 0: #Tratando as excecoes
 

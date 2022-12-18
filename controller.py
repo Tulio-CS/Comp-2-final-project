@@ -1,4 +1,8 @@
-from tkinter import *
+#Trabalho Final de Computação
+#Alunos: Jhulia Schmidt Ceccon, Pedro Henrique Chicarino, Túlio Castro Silva
+#Professor : Giomar
+
+from tkinter import Frame,Label,Tk
 from banco_dados import banco_de_dados
 from menu import menu
 from plotagem import graph
@@ -48,7 +52,7 @@ class Controller:
         self.framelist[2].forget()
         self.framelist[3].forget()
         if self.path == "":
-            self.path_label = Label(master,text="Caminho Invalido",bg="#292929",fg="white")
+            self.path_label = Label(master,text="Sem caminho",bg="#292929",fg="white")
         else:
             self.path_label = Label(master,text=self.path,bg="#292929",fg="white")
         self.path_label.pack()

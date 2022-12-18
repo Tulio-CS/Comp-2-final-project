@@ -1,5 +1,8 @@
+#Trabalho Final de Computação
+#Alunos: Jhulia Schmidt Ceccon, Pedro Henrique Chicarino, Túlio Castro Silva
+#Professor : Giomar
 
-from tkinter import *
+from tkinter import Button,Frame,Label,Tk,W
 import numpy as np
 class Estatisticas(Frame):
     def __init__(self,master:Tk,controller:object) -> object:
@@ -15,8 +18,7 @@ class Estatisticas(Frame):
 
         #Tratando excecoes
         if controller.path == "":
-
-            Label(self,text="Caminho Invalido",pady = 20,font="Ivi 10 bold",fg="#f44336",bg=a).grid(row=0,column=0)
+            pass
         else:
 
             #Tratando excecoes

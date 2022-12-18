@@ -1,4 +1,8 @@
-from tkinter import *
+#Trabalho Final de Computação
+#Alunos: Jhulia Schmidt Ceccon, Pedro Henrique Chicarino, Túlio Castro Silva
+#Professor : Giomar
+
+from tkinter import Label,Button,Frame,Tk
 from tkinter import ttk
 from tkinter import messagebox
 import matplotlib.pyplot as plt
@@ -37,7 +41,9 @@ class graph(Frame):
         """Funcao que plota um grafico apos escolhidos seus eixos"""
         
         # Tratando as excecoes
-        if self.x_axis.get() == "" or self.y_axis.get() == "":
+        if controller.path == "":
+            messagebox.showerror(message="Sem caminho")
+        elif self.x_axis.get() == "" or self.y_axis.get() == "":
 
             messagebox.showerror(message="Selecione os eixos")
         else:

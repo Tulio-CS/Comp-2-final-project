@@ -1,4 +1,8 @@
-from tkinter import * 
+#Trabalho Final de Computação
+#Alunos: Jhulia Schmidt Ceccon, Pedro Henrique Chicarino, Túlio Castro Silva
+#Professor : Giomar
+
+from tkinter import Frame,Label,Entry,Button
 from math import sqrt
 from tkinter import messagebox
 
@@ -41,8 +45,9 @@ class Analisar(Frame):
     def analisar(self,controller:object) -> object:
         """Função que classifica uma amostra de flor calculando sua distancia euclidiana
         e testando sua compatibilidade"""
-
-        if self.com_pet.get() == "" or self.lar_pet.get() == "" or self.com_sep.get() == "" or self.lar_sep.get() == "":
+        if controller.path == "":
+            messagebox.showerror(message="Sem caminho")
+        elif self.com_pet.get() == "" or self.lar_pet.get() == "" or self.com_sep.get() == "" or self.lar_sep.get() == "":
             # Tratando excecoes 
             messagebox.showerror(message="Não foram inseridas as informaçoes")
         else:
